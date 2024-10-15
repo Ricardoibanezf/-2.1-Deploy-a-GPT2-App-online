@@ -2,8 +2,9 @@ import streamlit as st
 from openai import OpenAI
 import os
 
+BUID= 1679203
 ### Load your API Key
-my_secret_key =st.secrets('MyOpenAIKey')
+my_secret_key =st.secrets['MyOpenAIKey']
 os.environ["OPENAI_API_KEY"] = my_secret_key
 
 
