@@ -1,6 +1,5 @@
 import streamlit as st
 from openai import OpenAI
-from google.colab import userdata
 import os
 
 ### Load your API Key
