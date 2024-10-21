@@ -5,7 +5,10 @@ import random
 import numpy as np
 import transformers
 from transformers import set_seed
-from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2")
+model = AutoModelForCausalLM.from_pretrained("openai-community/gpt2")
 
 BUID= 57631318
 
@@ -29,3 +32,5 @@ generator(prompt, max_length=20, num_return_sequences=10, truncation=True)
 for i in range(10):
   st.write(response.choices[i].message.content)
 
+
+# Load model directly
