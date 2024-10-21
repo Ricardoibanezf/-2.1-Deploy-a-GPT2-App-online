@@ -15,8 +15,15 @@ A2 = generator(prompt, max_length=tok_number, temperature = 0.3, num_return_sequ
 
 st.title("Homework 6 - GPT-2 Chatbot")
 
-st.write(A1)
-st.write(A2)
+st.write("Response 1 *Creative* :sunglasses:")
+st.write(
+    A1[0]['generated_text']
+)
+
+st.write("Response 2 *Predictable* :disappointed:")
+st.write(
+    A2[0]['generated_text']
+)
 
 
 
