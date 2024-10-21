@@ -1,9 +1,12 @@
+
 import streamlit as st
 import os
 from transformers import pipeline
 
 BUID= 57631318
+
 st.title("Homework 6 - GPT-2 Chatbot")
+st.write('Helpful chat')
 
 generator = pipeline('text-generation', model='gpt2')
 tok_number = st.number_input("Number of tokens for this answer:", min_value=1, value=100, max_value=1000)
@@ -17,14 +20,10 @@ A2 = generator(prompt, max_length=tok_number, temperature = 0.3, num_return_sequ
 
 
 st.write("Text 1 (Creative)")
-st.write(
-    A1[0]['generated_text']
-)
+st.write( A1[0]['generated_text'])
 
 st.write("Text 2 (Predictable) ")
-st.write(
-    A2[0]['generated_text']
-)
+st.write( A2[0]['generated_text'] )
 
 
 
