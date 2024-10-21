@@ -9,6 +9,7 @@ from transformers import pipeline
 
 BUID= 57631318
 
+prompt = st.text_input("What is your prompt today?")
 
 # Set a seed for the built-in Python random module
 random.seed(BUID)
@@ -22,7 +23,7 @@ set_seed(BUID)
 generator = pipeline(task='text-generation', model='gpt2')
 
 ### Generate the answer to the question "Damascus is a"
-generator("Damascus is a", max_length=20, num_return_sequences=10, truncation=True)
+generator(prompt, max_length=20, num_return_sequences=10, truncation=True)
 
 ### Print all 10 completions:
 for i in range(10):
