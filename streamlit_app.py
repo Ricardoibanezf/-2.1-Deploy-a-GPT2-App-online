@@ -19,11 +19,11 @@ A2 = generator(prompt, max_length=tok_number, temperature = 0.3, num_return_sequ
 
 
 
-st.write("Text 1 (Creative)")
-st.write( A1[0]['generated_text'])
+st.write("Text 1 (Creative: Higher temperature)")
+st.write( A1[0])
 
-st.write("Text 2 (Predictable) ")
-st.write( A2[0]['generated_text'] )
+st.write("Text 2 (Predictable: Lower temperature) ")
+st.write( A2[0] )
 
 
 
